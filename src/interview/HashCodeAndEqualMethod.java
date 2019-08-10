@@ -18,7 +18,7 @@ public class HashCodeAndEqualMethod
 	{
 		Employee emp1= new Employee("a","18","b");
 		Employee emp2= new Employee("a","19","b");
-		Employee emp3= new Employee("a","18","c");
+		Employee emp3= new Employee("a","18","b");
 		
 		
 		Map<Employee,String>  map=new HashMap<>();
@@ -109,6 +109,11 @@ class Employee
 		} else if (!name.equals(other.name))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", age=" + age + ", Salary=" + Salary + "]";
 	}
 	
 	

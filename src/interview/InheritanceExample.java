@@ -29,11 +29,6 @@ public class InheritanceExample extends Parent11
 }
 class Parent11
 {
-//	public void show(Integer a)
-//	{
-//		System.out.println("---Integer--");
-//	}
-	
 	public void show(Object a)
 	{
 		System.out.println("---Object--");

@@ -7,6 +7,7 @@ public class InterfaceDefination {
 		b.getSalary("Balu");
 		b.getSalaryInfo("adasdsa");
 		B.getAddress(null);
+		G.getAddress(null);
 }}
 
 interface G

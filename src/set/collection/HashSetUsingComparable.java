@@ -95,13 +95,13 @@ class College implements Comparable<College>
 		
 		if(this.getId()>o.getId())
 		{
-			return 1;
+			return -1;
 		}
 		else if(this.getId()==o.getId())
 		{
 			return 0;
 		}
-		return -1;
+		return 1;
 	}
 	
 }

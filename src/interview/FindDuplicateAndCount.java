@@ -2,10 +2,10 @@ package interview;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeSet;
 
 public class FindDuplicateAndCount {
 
@@ -30,7 +30,7 @@ public class FindDuplicateAndCount {
 //			sa.add(i);
 //		}
 		
-		ServiceApna sa = new ServiceApna(list);
+		ServiceApna<String> sa = new ServiceApna<>(list);
 		
 		System.out.println("Set Size "+sa.sizeApna());
 		System.out.println();
@@ -40,8 +40,8 @@ public class FindDuplicateAndCount {
 		System.out.println();
 
 		
-		
 		mapDupli = sa.getDuplicateData();
+		System.out.println("mapDupli---"+mapDupli);
 		
 		for(Map.Entry<Object,Object> mapping :mapDupli.entrySet())
 		{
@@ -51,7 +51,7 @@ public class FindDuplicateAndCount {
 }
 
 
-class ServiceApna
+class ServiceApna<T>
 {
 	private final static  Object PRESENT = new Object();
 	

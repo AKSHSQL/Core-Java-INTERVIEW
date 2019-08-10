@@ -13,14 +13,15 @@ public class NonExistingKeyPassed {
 		map.put("batit","bms");
 		map.put("Raju", "wwww");
 	   String val	=map.put("amit","Raj");
-		System.out.println(val);
-	  String val1=	map.put("amit","Raj");
-		System.out.println(	val1);
+		System.out.println("---Retunr String---"+val);
+	  String val1=	map.put("amit","RajaBeta");
+		System.out.println("----duplica---"+val1);
 		map.put("Adarsh", "zzzz");
 		map.put("Baju", "yyyy");
+//		map.put(null,"Dhoni");
 		
 		
-		System.out.println(map.get("bms"));
+		System.out.println("Non exisitng key passed to kya hoga----"+map.get("bms"));
 		
 		TreeMap<String,String> tree = new TreeMap<>(map);
 		
