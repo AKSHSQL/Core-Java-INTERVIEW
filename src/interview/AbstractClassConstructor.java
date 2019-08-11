@@ -12,10 +12,10 @@ abstract class Bacchi
 	
 }
 
-public class Child extends Bacchi
+public class AbstractClassConstructor extends Bacchi
 {
 
-	Child() 
+	AbstractClassConstructor() 
 	{
 	super(5);
 	System.out.println("default contrs");
@@ -24,7 +24,7 @@ public class Child extends Bacchi
 	
 public static void main(String[] args) {
 		
-		Child chi = new Child();
+		AbstractClassConstructor chi = new AbstractClassConstructor();
 
 	}
 

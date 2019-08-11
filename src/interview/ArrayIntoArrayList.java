@@ -1,33 +1,32 @@
 package interview;
 
-import java.util.LinkedList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayIntoArrayList {
 
-	public ArrayIntoArrayList() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public static void main(String[] args) {
 		
+//--------- Convert Array into List-----------------------------------------------
+	   String cricketer[]= {"Sachin","Dravid","Rahul","Yuvraj","Amit","Bunty"};
 		
-//	   List<String> list= (List) Arrays.asList('b','a','c');
-//	   Collections.sort(list);
-//	   System.out.println(list);
-//	   
+	   List<String> arrayToList= Arrays.asList(cricketer);
+	   Collections.sort(arrayToList);
+	   System.out.println(arrayToList);
+	   System.out.println();
 	   
-	   List<String> list = new LinkedList<String>(); 
-       list.add("Geeks"); 
-       list.add("for"); 
-       list.add("Geeks"); 
-       list.add("Practice"); 
+	   
+	   
+//--------- Convert List into Array----------------------------------------------- 
+       String[] arr = arrayToList.toArray(new String[0]); 
  
-       String[] arr = list.toArray(new String[0]); 
- 
+       int index=0;
        for (String x : arr) 
-           System.out.println(x + " "); 
-
+       {
+    	   System.out.println(x + "-----"+index);
+    	   index++;
+       }
 	}
 
 }
