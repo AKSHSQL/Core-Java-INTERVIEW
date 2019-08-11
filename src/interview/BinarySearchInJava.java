@@ -11,16 +11,19 @@ public class BinarySearchInJava {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number to be Search");
-		int searchItem=80;
+		int searchItem=sc.nextInt();
 		
 		int firstIndex=0;
 		int lastIndex=arr.length-1;
 		int middleIndex=(firstIndex+lastIndex) / 2;
 		
-		while(lastIndex<=firstIndex)
+		while(firstIndex<=lastIndex)
 		{
 			if(arr[middleIndex]==searchItem)
-				System.out.println("Your are Searching at Middle "+searchItem+" Which is at Index "+middleIndex);
+			{
+//				System.out.println("Your are Searching at Middle "+searchItem+" Which is at Index "+middleIndex);
+				break;
+			}
 			
 			else if(arr[middleIndex]<searchItem)
 				firstIndex=middleIndex+1;
@@ -31,9 +34,7 @@ public class BinarySearchInJava {
 			
 		}
 		System.out.println("Your are Searching "+searchItem+" Which is at Index "+middleIndex);
-		
-		
-
+		System.out.println();
+		BinarySearchInJava.main(null);
 	}
-
 }
