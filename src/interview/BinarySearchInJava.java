@@ -7,6 +7,10 @@ public class BinarySearchInJava {
 	public static void main(String[] args) {
 		
 		
+		/*In order to implement binary search in java , your array Object or List Object should be sorted in increasing order
+		 * Then only it can perform efficient searching
+		 * */
+		
 		int arr[]={10,25,45,50,54,62,78,80,90};
 		
 		Scanner sc = new Scanner(System.in);
