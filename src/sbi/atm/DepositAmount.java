@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import procedure.calling.example.MySqlConnection;
+import procedure.calling.MySqlConnection;
 
 public class DepositAmount {
 	
