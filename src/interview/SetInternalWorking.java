@@ -1,9 +1,10 @@
 package interview;
+
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Set;
+
 public class SetInternalWorking {
-	
+
 	public static void main(String[] args) {
 		HashSetApna service = new HashSetApna();
 		service.adding("bms");
@@ -12,56 +13,41 @@ public class SetInternalWorking {
 		service.adding("null");
 		service.adding("null");
 		System.out.println(service.sizeApna());
-		
 		service.removing("bms");
 		System.out.println(service.sizeApna());
-		
-		
 	}
-
 }
 
-class HashSetApna
-{
+class HashSetApna {
 	private static final Object PRESENT = new Object();
-	
-	private transient HashMap<Object,Object> map;
-	//Important Constructor
-	public HashSetApna()
-	{
+
+	private transient HashMap<Object, Object> map;
+
+	// Important Constructor
+	public HashSetApna() {
 		map = new HashMap<>();
 	}
-	public boolean adding(Object o)
-	{
-		 if(map.put(o,PRESENT) == null)
-		 return true;
-		 else
-		 return false;
+
+	public boolean adding(Object o) {
+		if (map.put(o, PRESENT) == null)
+			return true;
+		else
+			return false;
 	}
-	
-	public int sizeApna(){
-		
+
+	public int sizeApna() {
 		return map.size();
-		
 	}
-	
-	//HOw to remove element
-	public boolean removing(Object o)
-	{
-		 if(map.remove(o) == PRESENT){
-			 System.out.println("True");
-			return true;}
-			 else
-			 return false;
+	// HOw to remove element
+	public boolean removing(Object o) {
+		if (map.remove(o) == PRESENT) {
+			System.out.println("True");
+			return true;
+		} else
+			return false;
 	}
-	
-	public Iterator<Object> iterator()
-	{
+
+	public Iterator<Object> iterator() {
 		return map.keySet().iterator();
 	}
-	
-	
-	
-	
-	
 }

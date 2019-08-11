@@ -3,60 +3,65 @@ package interview;
 import java.util.HashSet;
 import java.util.Set;
 
-public class InternalWorkingSet {
+public class StoreUniqueObjectOfEmployee {
 
 	public static void main(String[] args) {
-		
-		
+
 		Set<EmployeeModel> set = new HashSet<EmployeeModel>();
-		boolean abc =set.add(new EmployeeModel("Bms","24","9225361825"));
-		boolean abcd =set.add(new EmployeeModel("Bms","24","9225361825"));
 		
-		
-		System.out.println(set.size()+"         "+abc+"    "+abcd);
+		/*
+		 * HashSet has add(Object o) which return boolean value:
+		 */
+		boolean abc = set.add(new EmployeeModel("Bms", "24", "9225361825")); 
+		boolean abcd = set.add(new EmployeeModel("Bms", "24", "9225361825"));
+		System.out.println(set.size() + " " + abc + " " + abcd);
 		System.out.println(set.toString());
 
 	}
 
 }
 
-
-
-class EmployeeModel
-{
+class EmployeeModel {
 	private String name;
 	private String age;
 	private String mobileno;
-	
-	
+
 	public EmployeeModel(String name, String age, String mobileno) {
 		super();
 		this.name = name;
 		this.age = age;
 		this.mobileno = mobileno;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getAge() {
 		return age;
 	}
+
 	public void setAge(String age) {
 		this.age = age;
 	}
+
 	public String getMobileno() {
 		return mobileno;
 	}
+
 	public void setMobileno(String mobileno) {
 		this.mobileno = mobileno;
 	}
+
 	@Override
 	public String toString() {
 		return "EmployeeModel [name=" + name + ", age=" + age + ", mobileno=" + mobileno + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -66,6 +71,7 @@ class EmployeeModel
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -92,7 +98,5 @@ class EmployeeModel
 			return false;
 		return true;
 	}
-	
-	
-	
-	}
+
+}

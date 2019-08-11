@@ -2,7 +2,7 @@ package interview;
 
 import java.util.ArrayList;
 
-public class FinalArrayList {
+public class ArrayListShiftingMechanisam {
 
 	public static void main(String[] args)
 	{
@@ -23,8 +23,15 @@ class Final
 		list1.add("ajinkya");
 		list1.add("dhawan");
 		System.out.println(list1);
+		
+	//Tricky question--------------------------------------	
+    //After remvoing of element shifting will take place--------
 		String a= list1.remove(0);
+		System.out.println("--list1.remove(0)--shifitng will take place-");
+		System.out.println(list1);
+  
 		String b=list1.remove(1);
+		System.out.println("--list1.remove(1)--shifitng will take place-");
 //		list1.re
 //		list1.remove(3);
 //		list1.remove(4);
