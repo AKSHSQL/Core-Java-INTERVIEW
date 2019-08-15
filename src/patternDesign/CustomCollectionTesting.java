@@ -9,7 +9,7 @@ public class CustomCollectionTesting {
 		
 		List<String> list = new ArrayList<>();
 		
-		CustomCollection col= new CustomCollection();
+		CustomArrayLogic col= new CustomArrayLogic();
 		
 		try{
 			

@@ -1,6 +1,6 @@
 package patternDesign;
 
-public class CustomCollection {
+public class CustomArrayLogic {
 	
 	//1st instance variable
 	private Object firstArray[]= new Object[5];
