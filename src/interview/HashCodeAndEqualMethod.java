@@ -22,9 +22,10 @@ public class HashCodeAndEqualMethod
 		
 		
 		Map<Employee,String>  map=new HashMap<>();
-		map.put(emp1, "Jack");
-		map.put(emp2, "Bms");
-		map.put(emp3, "Balu");
+		map.put(emp1, "Before");
+		map.put(emp1, "After");
+		map.put(emp2, "Balu");
+		map.put(emp3, "Bms");
 		
 		System.out.println("---size of map---"+map.size());
 		
@@ -43,8 +44,6 @@ class Employee
 	String name;
 	String age;
 	String Salary;
-	 
-	
 	
 	public Employee(String name, String age, String salary) {
 		super();

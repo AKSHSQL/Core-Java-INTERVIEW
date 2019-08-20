@@ -69,33 +69,11 @@ class LaptopModel implements Comparable<LaptopModel>{
 		boolean abc = this.getPrice() > model.getPrice();
 		
 		if(abc)
-			return 1;
+			return -1;
 		else
-		   return -1;
+		   return 1;
 		
 	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ram;
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		LaptopModel other = (LaptopModel) obj;
-		if (ram != other.ram)
-			return false;
-		return true;
-	}
-	
-	
 }
 
 

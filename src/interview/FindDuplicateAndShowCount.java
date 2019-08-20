@@ -6,9 +6,16 @@ public class FindDuplicateAndShowCount {
 
 	public static void main(String[] args)
 	{
+		Integer a=null;
+		Integer b=0;
+		
+		Boolean c= null;
+		Boolean d=false;
+		
+		
 		HashMap<String,Integer> mapDupli = new HashMap<>();
 		
-		String nameArr[]={"RAHUL","ajinkya","RAHUL","Dhoni","Dhoni","Jadeja","Abcd","Jadeja"};
+		String nameArr[]={"RAHUL","ajinkya","RAHUL","Dhoni","Dhoni","Jadeja","Abcd","Jadeja","RAHUL"};
 		
 		for(String name:nameArr)
 		{
@@ -21,6 +28,10 @@ public class FindDuplicateAndShowCount {
 			}
 		}
 		System.out.println(mapDupli);
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
 	}
 }
 
