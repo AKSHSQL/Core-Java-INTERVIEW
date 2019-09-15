@@ -20,6 +20,7 @@ public class BinarySearchInJava {
 		int firstIndex=0;
 		int lastIndex=arr.length-1;
 		int middleIndex=(firstIndex+lastIndex) / 2;
+		System.out.println("middleIndex--"+middleIndex);
 		
 		while(firstIndex<=lastIndex)
 		{

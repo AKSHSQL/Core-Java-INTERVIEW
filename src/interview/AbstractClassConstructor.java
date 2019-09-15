@@ -22,7 +22,7 @@ public class AbstractClassConstructor extends Bacchi
 		
 	}
 	
-public static void main(String[] args) {
+    public static void main(String[] args) {
 		
 		AbstractClassConstructor chi = new AbstractClassConstructor();
 

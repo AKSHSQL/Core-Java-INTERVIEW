@@ -12,7 +12,7 @@ public class ArrayIntoArrayList {
 	   String cricketer[]= {"Sachin","Dravid","Rahul","Yuvraj","Amit","Bunty"};
 		
 	   List<String> arrayToList= Arrays.asList(cricketer);
-	   Collections.sort(arrayToList);
+	   Collections.sort(arrayToList);   // sort method is return type void
 	   System.out.println(arrayToList);
 	   System.out.println();
 	   

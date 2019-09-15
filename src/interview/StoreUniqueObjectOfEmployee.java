@@ -12,9 +12,15 @@ public class StoreUniqueObjectOfEmployee {
 		/*
 		 * HashSet has add(Object o) which return boolean value:
 		 */
-		boolean abc = set.add(new EmployeeModel("Bms", "24", "9225361825")); 
-		boolean abcd = set.add(new EmployeeModel("Bms", "24", "9225361825"));
-		System.out.println(set.size() + " " + abc + " " + abcd);
+		
+		EmployeeModel e1= new EmployeeModel("Bms", "24", "9225361825");
+		EmployeeModel e2= new EmployeeModel("Bms", "24", "9225361825");
+		
+		
+		boolean a1 = set.add(e1); 
+		boolean a2 = set.add(e1);
+		boolean a3 = set.add(e2);
+		System.out.println(set.size() + " " + a1 + " " + a2+"    "+a3);
 		System.out.println(set.toString());
 
 	}
