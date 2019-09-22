@@ -1,5 +1,8 @@
 package interview;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 class Parent {
 	
 	/*  If the superclass method does not declare an exception,
@@ -10,11 +13,15 @@ class Parent {
 		System.out.println("parent");
 	}
 	
-	/*  If the superclass method declares an exception, subclass overridden method can declare same,
+	/*  If the superclass method declares an Checked or Unchecked exception, subclass overridden method can declare same,
 	 *  subclass exception or no exception but cannot declare parent exception.
+	 *  Only RunTimeException is allowed in this case
+	 *  
+	 *  Any Method who call this method who is going to throw exception
+	 *  then calling method should handle with Try and catch
 	 */
-	public void getMethod() throws ArrayIndexOutOfBoundsException {
-		System.out.println("-----ArrayIndexOutOfBoundsException--In Parent");
+	public void getMethod() throws FileNotFoundException{
+		System.out.println("-----FileNotFoundException--In Parent");
 	}
 	
 	/*In static method ,restriction in child class even though it is not overriding, It is method Hiding (Compiler say It is Inherited Methods)
@@ -25,6 +32,15 @@ class Parent {
 	 *  protected   |    private               Note: Compile Time Error
 	 *  static      |    non -static           Note: Compile Time Error
 	 * */
+	
+	/*Parent class has Object return type and child can have Object or String return type
+	 * It throws Checked Exception
+	 * */
+	public Object getName() throws IOException{
+		System.out.println("Checked Exception in Parent IOException");
+		return "bms";
+	}
+	
 	public static void addNumber(){
 		System.out.println("---Parent--addNumber--");
 	}
@@ -37,8 +53,9 @@ class Parent {
 public class MethodOverRidingWithException extends Parent {
 	
 	// while overriding only unchecked exception are allowed here  ,dont write checked exception IOException,SQLException
+	// RuntimeException is unchecked Exception
 	@Override 
-	public void saveData() throws NullPointerException {
+	public void saveData() throws RuntimeException {
 		System.out.println("parent");
 	}
 	
@@ -47,6 +64,14 @@ public class MethodOverRidingWithException extends Parent {
 	public void getMethod() throws RuntimeException {
 
 		System.out.println("RuntimeException--child----");
+	}
+	
+	/*Parent class has Object return type and child can have Object or String return type
+	 * */
+	@Override
+	public String getName() throws RuntimeException {
+		System.out.println("Checked Exception in Parent IOException1 and RuntimeException1 in child");
+		return "bms";
 	}
 	
 // In static method u cannot make protected here, It should be public only	
@@ -62,11 +87,23 @@ public class MethodOverRidingWithException extends Parent {
 	public static void main(String[] args) {
 
 		Parent m = new MethodOverRidingWithException();
-		m.getMethod();
+		try {
+			  //Any Method who call this method who is going to throw exception
+			  //  then calling method should handle with Try and catch
+			  m.getMethod();
+		    }
+		    catch (IOException e) {
+			e.printStackTrace();
+		}
 		m.saveData();
 		m.addNumber();
 		m.multiplyNumber();
-		
+		try {
+			m.getName();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

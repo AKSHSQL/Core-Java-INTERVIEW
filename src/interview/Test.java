@@ -22,7 +22,7 @@ public class Test {
 		
 		Thread t2 = new Thread(()->
 		{for(int i =0 ;i<10;i++){
-			System.out.println("-Thread 2--"+"-----Bhag Bhosadi--Ke------");
+			System.out.println("-Thread 2--"+"-----Bhag BHAG -d-Ke------");
 			try {
 				Thread.sleep(10000);
 			} catch (InterruptedException e) {
