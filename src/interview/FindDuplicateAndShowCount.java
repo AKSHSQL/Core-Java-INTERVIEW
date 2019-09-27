@@ -1,6 +1,7 @@
 package interview;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class FindDuplicateAndShowCount {
 
@@ -12,7 +13,7 @@ public class FindDuplicateAndShowCount {
 		Boolean c= null;
 		Boolean d=false;
 		
-		
+		// Its Time Complexity is O(2n)
 		HashMap<String,Integer> mapDupli = new HashMap<>();
 		
 		String nameArr[]={"RAHUL","ajinkya","RAHUL","Dhoni","Dhoni","Jadeja","Abcd","Jadeja","RAHUL"};
@@ -32,6 +33,16 @@ public class FindDuplicateAndShowCount {
 		System.out.println(b);
 		System.out.println(c);
 		System.out.println(d);
+		
+		
+		HashSet<String> hashset = new HashSet<String>();
+		
+		for(String name :nameArr){
+			
+			if(hashset.add(name)==false)
+				System.out.println("--Hashset Duplicates---"+name);
+		}
+		
 	}
 }
 

@@ -9,7 +9,7 @@ public class InheritanceExample extends Parent11
 		m.show(null);
 		m.add(null,null);
 		m.demo(null,null);
-		m.demo(null,null,null);
+		m.demo(null,null);
 
 	}
 	
@@ -20,10 +20,11 @@ public class InheritanceExample extends Parent11
 		return "";
 	}
 	
-	protected String demo(String a,String b,String c)
+	
+	protected String demo(String a,String b)
 	{
 		System.out.println("---over ride 2- hua-");
-		return "";
+		return true;
 	}
 
 }
@@ -45,10 +46,10 @@ class Parent11
 		return "";
 	}
 	
-	protected String demo(String a,String b)
+	protected Boolean demo(String a,String b)
 	{
 		System.out.println("---Parent Overrinding--");
-		return "";
+		return true;
 	}
 	
 	
