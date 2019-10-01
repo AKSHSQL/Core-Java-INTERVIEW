@@ -21,7 +21,7 @@ public class InheritanceExample extends Parent11
 	}
 	
 	
-	protected String demo(String a,String b)
+	protected Boolean demo(String a,String b)
 	{
 		System.out.println("---over ride 2- hua-");
 		return true;

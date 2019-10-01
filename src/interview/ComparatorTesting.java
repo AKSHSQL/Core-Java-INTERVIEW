@@ -23,9 +23,9 @@ public class ComparatorTesting {
 			public int compare(LaptopClassModel o1, LaptopClassModel o2) 
 			{
 				if(o1.getRam()> o2.getRam())
-				return 1;
+				return -1;
 				else  
-					return -1;
+					return 1;
 			}
 			
 		}; // IT requires here

@@ -22,16 +22,29 @@ public class HashCodeAndEqualMethod
 		
 		
 		Map<Employee,String>  map=new HashMap<>();
-		map.put(emp1, "Before");
-		map.put(emp1, "After");
-		map.put(emp2, "Balu");
-		map.put(emp3, "Bms");
+		map.put(emp1, "Before"); //--hash code--172891
+		map.put(emp1, "After"); //--hash code--172891
+		map.put(emp2, "Balu"); //--hash code--172922
+		map.put(emp3, "Bms"); //--hash code--172891
 		
-		System.out.println("---size of map---"+map.size());
+//		Note: Without overriding hashcode() and equal()
+		// Size without overriding is 3
+		/*---Key---Employee [name=a, age=18, Salary=b]    Value----Bms
+		  ---Key---Employee [name=a, age=18, Salary=b]    Value----After
+          ---Key---Employee [name=a, age=19, Salary=b]    Value----Balu
+        */
 		
+//		Note: With overriding hashcode() and equal()
+		// Size without overriding is 2
+		/*---Key---Employee [name=a, age=18, Salary=b]    Value----Bms
+          ---Key---Employee [name=a, age=19, Salary=b]    Value----Balu
+        */
+
+		System.out.println("---size of map---"+map.size()); 
 		for(Map.Entry<Employee,String> m :map.entrySet())
 		{
 			System.out.println("---Key---"+m.getKey()+"    Value----"+m.getValue());
+			
 		}
 		
 		

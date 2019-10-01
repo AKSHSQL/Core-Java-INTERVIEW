@@ -28,6 +28,17 @@ public class NonExistingKeyPassed {
 		for (Map.Entry<String, String> o : tree.entrySet()) {
 			System.out.println(o.getKey() + "   " + o.getValue());
 		}
+		
+		/*--  When New Key is store in map.put in HashMap it returns----null
+			--When Exisiting Key is store in map.put in HashMap it returns--previous value--Raj
+			Non exisitng key passed to kya hoga----null
+			Adarsh   zzzz
+			Baju   yyyy
+			Raju   wwww
+			amit   RajaBeta
+			batit   bms
+		 * 
+		 * */
 
 	}
 

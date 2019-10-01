@@ -22,11 +22,11 @@ public class CollectionSorting {
 		
 		Collections.sort(list);
 		
-		System.out.println("Ascending ----"+list);
+		System.out.println("Ascending ----"+list); //Ascending ----[Anil, David, Rahul, Xavier, abhijeet, balu, dharam, lion]
 
 		Collections.reverse(list);
 		
-		System.out.println("Descending ----"+list);
+		System.out.println("Descending ----"+list); //Descending ----[lion, dharam, balu, abhijeet, Xavier, Rahul, David, Anil]
 		
 		List<Integer>  list1 = new ArrayList<Integer>();
 		
@@ -36,14 +36,14 @@ public class CollectionSorting {
 		list1.add(57);
 		list1.add(1);
 		
-		System.out.println(list1);
+		System.out.println(list1); //[10, 5, 4, 57, 1]
 		
 		Collections.sort(list1);
-		System.out.println("Ascending ----"+list1);
+		System.out.println("Ascending ----"+list1); //Ascending ----[1, 4, 5, 10, 57]
 		
 		Collections.reverse(list1);
 		
-		System.out.println(list1);
+		System.out.println(list1); //[57, 10, 5, 4, 1]
 		
 		
 		

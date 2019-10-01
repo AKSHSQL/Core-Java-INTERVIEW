@@ -8,10 +8,15 @@ public class ArrayIntoArrayList {
 
 	public static void main(String[] args) {
 		
+//		How to create number array directly
+		int number[]={1,2,3,4,5,6,7,8};
+		
+		
 //--------- Convert Array into List-----------------------------------------------
 	   String cricketer[]= {"Sachin","Dravid","Rahul","Yuvraj","Amit","Bunty"};
 		
 	   List<String> arrayToList= Arrays.asList(cricketer);
+	   System.out.println(arrayToList);
 	   Collections.sort(arrayToList);   // sort method is return type void
 	   System.out.println(arrayToList);
 	   System.out.println();
