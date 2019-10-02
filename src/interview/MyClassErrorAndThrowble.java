@@ -1,18 +1,18 @@
 package interview;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.SQLException;
 
-public class MyClassErrorAndThrowble extends Child{
+public class MyClassErrorAndThrowble{
 
 	public static void main(String[] args)
 	{
-		
+		MyClassErrorAndThrowble error = new MyClassErrorAndThrowble();
+		 
+		//Unhandled Exception should by handled by try catch
+//		 error.exp(); //: Compile Time Error
+		 error.exp1(); //: RuntimeException will throw
 	 try{
-			int a=10;
-			int b=0;
-//			int c=a/b;
-		}
+		
 	    /*Working Possibility without Throwable
 	     * catch(Exception e)
 	     * catch(RuntimeException e)
@@ -35,9 +35,11 @@ public class MyClassErrorAndThrowble extends Child{
 	     * catch(FileNotFoundException | FileAlreadyExistsException | IOException e)
 	     * 
 	     * */
+		 System.out.println("--try---");
+	     }
 	    catch(ArithmeticException | NullPointerException | NumberFormatException e)
 		{
-		 
+	    	System.out.println("--NullPointerException---"+e.getStackTrace());
 		}
 	    catch(Throwable e){
 	    	System.out.println("--Catch---"+e.getStackTrace());
@@ -45,6 +47,18 @@ public class MyClassErrorAndThrowble extends Child{
 	    }
 	 }
 	 
+//	 Note: if u throwing any CHECKED exception it should handled by throws key word : Compiled Successfully
+	 public void exp() throws SQLException
+	 {
+		 System.out.println("--SQLException---");
+		 throw new SQLException();
+	 }
+//	 Note: if u throwing any UNCHECKED exception, No need to use handle by throws keyword : Compiled Successfully
+	 public void exp1()
+	 {
+		 System.out.println("--Null  Pointer  Exception---");
+		 throw new NullPointerException();
+	 }
 }
 
 
