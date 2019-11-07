@@ -36,6 +36,12 @@ public class ComparatorTesting {
 		for(LaptopClassModel o :list )
 		{
 			System.out.println(o);
+			/*  LaptopClassModel [brand=HP, ram=16, price=12000]
+				LaptopClassModel [brand=Dell, ram=8, price=10000]
+				LaptopClassModel [brand=Acer, ram=4, price=8000]
+
+			 * 
+			 * */
 		}
 		
 

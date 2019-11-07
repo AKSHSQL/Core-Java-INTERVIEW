@@ -1,14 +1,14 @@
 package interview;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class CocurrentModificationHashMap {
 
 	public static void main(String[] args) {
 
-		Map<Integer,Integer> map = new HashMap<>();
-//		Map<Integer,Integer> map = new ConcurrentHashMap<>();
+//		Map<Integer,Integer> map = new HashMap<>();
+		Map<Integer,Integer> map = new ConcurrentHashMap<>();
 		
 		Runnable runnable1 = ()->
 		{

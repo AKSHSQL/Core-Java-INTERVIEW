@@ -16,10 +16,10 @@ public class ArrayIntoArrayList {
 	   String cricketer[]= {"Sachin","Dravid","Rahul","Yuvraj","Amit","Bunty"};
 		
 	   List<String> arrayToList= Arrays.asList(cricketer);
-	   System.out.println(arrayToList);
+	   System.out.println(arrayToList); //[Sachin, Dravid, Rahul, Yuvraj, Amit, Bunty]
 	   Collections.sort(arrayToList);   // sort method is return type void
-	   System.out.println(arrayToList);
-	   System.out.println();
+	   System.out.println(arrayToList); // [Amit, Bunty, Dravid, Rahul, Sachin, Yuvraj]
+	   System.out.println();            //    0     1       2      3      4       5  
 	   
 	   
 	   

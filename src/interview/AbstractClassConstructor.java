@@ -31,3 +31,9 @@ public class AbstractClassConstructor extends Bacchi
 	
 }
 
+/*OUTPUT:
+   abstract class constructor 5
+   default contrs
+ 
+ */
+

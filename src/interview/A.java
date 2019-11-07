@@ -5,8 +5,8 @@ public class A {
 	public static void main(String a[]){
 		
 		A aa= new A();
-		System.out.println(aa.test());
-		aa.display(5);
+		System.out.println(aa.test());  // 3
+		aa.display(5);                  //long called
 		
 	}
 	
