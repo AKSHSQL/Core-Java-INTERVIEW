@@ -3,7 +3,7 @@ package interview;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-class Parent {
+class Parent1 {
 	
 	/*  If the superclass method does not declare an exception,
 	    subclass overridden method cannot declare the checked exception but
@@ -50,13 +50,13 @@ class Parent {
 	}
 }
 
-public class MethodOverRidingWithException extends Parent {
+public class MethodOverRidingWithException extends Parent1 {
 	
 	// while overriding only unchecked exception are allowed here  ,dont write checked exception IOException,SQLException
 	// RuntimeException is unchecked Exception
 	@Override 
 	public void saveData() throws RuntimeException {
-		System.out.println("parent");
+		System.out.println("Child saveData");
 	}
 	
 	//Same, SubClass Exception ,  No exception are allowed here
@@ -86,7 +86,7 @@ public class MethodOverRidingWithException extends Parent {
 
 	public static void main(String[] args) {
 
-		Parent m = new MethodOverRidingWithException();
+		Parent1 m = new MethodOverRidingWithException();
 		try {
 			  //Any Method who call this method who is going to throw exception
 			  //  then calling method should handle with Try and catch

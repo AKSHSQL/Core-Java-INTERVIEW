@@ -12,7 +12,6 @@ public class HashCodeAndEqualMethod
 		
 		HashCodeAndEqualMethod mm= new HashCodeAndEqualMethod();
 		mm.checking();
-		mm.stringCheck();
 	}
 	
 	public void checking()
@@ -50,21 +49,6 @@ public class HashCodeAndEqualMethod
 		
 		
 	}
-	
-	public void stringCheck()
-	{
-		String s1="Germany";
-		String s2=new String("Germany");
-		String s3=new String("Germany");
-		
-		Map<String,String>  map=new HashMap<>();
-		map.put(s1,"Amit");
-		map.put(s2,"Bat");
-		map.put(s3,"Chetan");
-		map.put(s1,"Dinesh");
-		System.out.println(map); //{Germany=Dinesh}
-	}
-
 }
 
 class Employee 
