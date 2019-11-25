@@ -4,21 +4,21 @@ public class DefaultAndParameterisedConstructor{
 
 	public static void main(String[] args) {
 		
-		A a = new Bb();
+		Aai a = new Babu();
 
 	}
 
 }
-class A{
+class Aai{
 	
-	public A(int a){
+	public Aai(int a){
 		System.out.println("A");
 	}
 }
 
-class Bb extends A{
+class Babu extends Aai{
 	
-	public Bb(){
+	public Babu(){
 		super();   //Note Error will occur here , since default constructor is not present              
 		System.out.println("B");
 	}
