@@ -20,6 +20,10 @@ public class HashCodeAndEqualMethod
 		Employee emp2= new Employee("a","19","b");
 		Employee emp3= new Employee("a","18","b");
 		
+ //     Note: Without overriding hashcode() and equal() 
+		System.out.println(emp1.hashCode());  
+		System.out.println(emp2.hashCode());
+		System.out.println(emp3.hashCode());
 		
 		Map<Employee,String>  map=new HashMap<>();
 		map.put(emp1, "Before"); //--hash code--172891
@@ -29,9 +33,9 @@ public class HashCodeAndEqualMethod
 		
 //		Note: Without overriding hashcode() and equal()
 		// Size without overriding is 3
-		/*---Key---Employee [name=a, age=18, Salary=b]    Value----Bms
-		  ---Key---Employee [name=a, age=18, Salary=b]    Value----After
-          ---Key---Employee [name=a, age=19, Salary=b]    Value----Balu
+		/*---Key---Employee [name=a, age=18, Salary=b]    Value----Bms        //--hash code--366712642
+		  ---Key---Employee [name=a, age=18, Salary=b]    Value----After      //--hash code--1829164700
+          ---Key---Employee [name=a, age=19, Salary=b]    Value----Balu       //--hash code--2018699554
         */
 		
 //		Note: With overriding hashcode() and equal()
