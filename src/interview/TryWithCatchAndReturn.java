@@ -31,4 +31,8 @@ public class TryWithCatchAndReturn {
 	}
 
 }
-//HIiiiiiiiiiiiiiiiiii
+
+// OUTPUT--
+//  try
+//  finally
+//  3
